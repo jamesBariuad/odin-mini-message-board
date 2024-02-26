@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div
+    each message in messages
+      div= message.text
+      div= message.user 
+      div= "date:" + new Date(message.added).toDateString()
