@@ -1,5 +1,7 @@
-extends layout 
 
-form(method="post" action="/new")
-    label(for="messageText") Message: 
-    input(type="text") 
+form(method="POST" action="/new")
+      label(for="authorName") Name: 
+      input(type="text", name="authorName" id="authorName" required) 
+      label(for="messageText") Message: 
+      textarea(name="messageText" cols="30" id='messageText' required) 
+      button(type="submit") Submit

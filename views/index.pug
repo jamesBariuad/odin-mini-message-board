@@ -3,8 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  button(type="button") 
+    a(href="/new") Send a New Message
   div
     each message in messages
-      div= message.text
-      div= message.user 
-      div= "date:" + new Date(message.added).toDateString()
+      div 
+        div= message.text
+        div= message.user 
+        div= "date:" + new Date(message.added)
